@@ -38,7 +38,7 @@ class Question(BaseModel):
                 'is_correct' : answer_obj.is_correct
             })
         return data
-
+ 
 class Answer(BaseModel):
     question = models.ForeignKey(Question,related_name='question_answer', on_delete = models.CASCADE)
     answer = models.CharField(max_length=100)
